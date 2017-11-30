@@ -1,6 +1,6 @@
 {
-  "name": "delayqueue",
-  "version": "1.0.0",
+  "name": "delay-queue",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "directories": {
