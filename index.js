@@ -1,1 +1,1 @@
-require('./sources')
+module.exports = require('./sources')
