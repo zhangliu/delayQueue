@@ -1,0 +1,28 @@
+{
+  "name": "delayqueue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha -t 20000 ./tests/*/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangliu/delayQueue.git"
+  },
+  "keywords": [
+    "delayqueue"
+  ],
+  "author": "zhangliu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangliu/delayQueue/issues"
+  },
+  "homepage": "https://github.com/zhangliu/delayQueue#readme",
+  "dependencies": {
+    "mocha": "^4.0.1"
+  }
+}
