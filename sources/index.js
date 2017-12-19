@@ -1,7 +1,7 @@
 const EventEmitter = require('events')
 
 class DelayQueue extends EventEmitter {
-  constructor(delayTime, limitNum) {
+  constructor (delayTime, limitNum) {
     super()
     this.limitNum = +limitNum || 0
     this.delayTime = +delayTime || 0
@@ -9,7 +9,7 @@ class DelayQueue extends EventEmitter {
     this.delayMessages = []
   }
 
-  putMessage(message) {
+  putMessage (message) {
     if (this.delayMessages.length >= this.limitNum) return false
     this.delayMessages.push(message)
     if (!this.timer) {
@@ -17,9 +17,10 @@ class DelayQueue extends EventEmitter {
       const delayTime = this.delayTime - diffTime
       this.timer = this.handleMessage(delayTime > 0 ? delayTime : 0)
     }
+    return true
   }
 
-  handleMessage(delayTime) {
+  handleMessage (delayTime) {
     return setTimeout(() => {
       const messages = this.delayMessages
       if (messages.length <= 0) {
